@@ -8,8 +8,12 @@ pipeline{
     stages{
         stage("Build"){
             steps {
-                bat  "mvn -version"
-                bat  "mvn clean install"
+                dir("sigo-ci-sample"){
+                    sh  "mvn -version"
+                    sh  "mvn clean install"
+                }
+               
+                
             }
         }
     }

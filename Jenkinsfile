@@ -8,8 +8,8 @@ pipeline{
     stages{
         stage("Build"){
             steps {
-                bat  "mvnw.cmd -version"
-                bat  "mvnw.cmd clean install"
+                bat  "mvn -version"
+                bat  "mvn clean install"
             }
         }
     }

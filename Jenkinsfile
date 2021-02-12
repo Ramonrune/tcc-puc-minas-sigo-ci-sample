@@ -9,8 +9,8 @@ pipeline{
         stage("Build"){
             steps {
                 dir("sigo-ci-sample"){
-                    sh  "mvn -version"
-                    sh  "mvn clean install"
+                    bat  "mvnw.cmd -version"
+                    bat  "mvnw.cmd clean install"
                 }
                
                 
